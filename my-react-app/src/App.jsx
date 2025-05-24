@@ -8,6 +8,7 @@ import Button3 from "./Button3"
 import Student from "./Student"
 import UserGreeting from "./UserGreeting"
 import List from "./List"
+import ClickEventButton from "./ClickEventButton"
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
       <UserGreeting />
       {fruits.length > 0 && <List items={fruits} category = "Fruits" />}
       {vegetables.length > 0 && <List items={vegetables} category="Vegetables" />}
+      <ClickEventButton />
       <Footer />
     </>
   )
