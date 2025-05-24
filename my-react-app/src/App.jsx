@@ -6,6 +6,7 @@ import Button from "./Button"
 import Button2 from "./Button/Button2"
 import Button3 from "./Button3"
 import Student from "./Student"
+import UserGreeting from "./UserGreeting"
 
 function App() {
 
@@ -23,6 +24,8 @@ function App() {
       <Student name="Squidward" age={50} isStudent={false}/>
       <Student name="Sandy" age={27} isStudent={true}/>
       <Student />
+      <UserGreeting isLoggedIn = {true} username = "UmaKallepally"/>
+      <UserGreeting />
       <Footer />
     </>
   )
