@@ -10,6 +10,7 @@ import UserGreeting from "./5UserGreeting"
 import List from "./6List"
 import ClickEventButton from "./7ClickEventButton"
 import ProfilePicture from "./7ProfilePicture"
+import ReactHook from "./8ReactHook"
 
 function App() {
 
@@ -45,6 +46,7 @@ function App() {
       {vegetables.length > 0 && <List items={vegetables} category="Vegetables" />}
       <ClickEventButton />
       <ProfilePicture />
+      <ReactHook />
       <Footer />
     </>
   )
