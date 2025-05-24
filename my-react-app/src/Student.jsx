@@ -1,17 +1,29 @@
+import PropTypes from 'prop-types'
+import { withPropTypesCheck } from './withPropTypesCheck'
 
-
-function Student(props) {
+function Student({name = "Guest", age = 0, isStudent = false}) {
   return(
     <div className="student">
-      <p>Name: {props.name}</p>
-      <p>Age: {props.age}</p>
-      <p>Student: {props.isStudent ? "Yes" : "No"}</p>
+      <p>Name: {name}</p>
+      <p>Age: {age}</p>
+      <p>Student: {isStudent ? "Yes" : "No"}</p>
     </div>
   )
 }
 
+Student.propTypes = {
+  name: PropTypes.string,
+  age: PropTypes.number,
+  isStudent: PropTypes.bool,
+}
 
-export default Student
+Student.defaultProps = {
+  name: "Guest",
+  age: 0,
+  isStudent: false,
+}
+
+export default withPropTypesCheck(Student)
 
 // props = read-only properties that are shared between components.
 //         A parent component can send data to a child component.
